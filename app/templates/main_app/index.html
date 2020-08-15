@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block body_block %}
+    <!-- Banner Section Start -->
+
+    <div class="rs-banner relative">
+
+        <div class="rev_slider_wrapper">
+
+            <div id="rev_slider_1" class="rev_slider" data-version="5.4.5">
+
+                <!-- BEGIN SLIDES LIST -->
+                <ul>
+
+                    <!-- MINIMUM SLIDE STRUCTURE -->
+                    <li data-transition="fade">
+                        <!-- SLIDE'S MAIN BACKGROUND IMAGE -->
+                        <img class="rev-slidebg" src="{% static 'assets/images/banner/banner_bg.jpg' %}""
+
+                        alt=""
+                        data-bgposition="center bottom"
+                        data-bgfit="cover"
+                        data-bgrepeat="no-repeat">
+
+                        <h1 
+                            class="tp-caption tp-resizeme banner-title main-lys"
+                            data-x="['left','left','left','left']" data-hoffset="['0','0','0','0']" 
+                            data-y="['350','280','230','200']" data-voffset="['0','0','0','0']" 
+                            data-height="none"
+                            data-type="text"
+                            data-responsive_offset="on"
+                            data-fontsize="['50','60','50','40']"
+                            data-lineheight="['60','60','50','40']"
+                            data-frames='[{"delay":0,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[20,20,20,20]">
+                            Behind every<br> <u>artificial intelligence</u> <br>there is human intelligence.
+
+                        </h1>
+                        <div 
+
+                            class="tp-caption tp-resizeme button-part main-lys"
+                            data-x="left" data-hoffset="0"
+                            data-y="center" data-voffset="185" 
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-type="text" 
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":600,"speed":1000,"frame":"0","from":"x:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'
+
+                            data-textAlign="['left','left','left','left']"
+                            data-paddingtop="[0,0,0,0]"
+                            data-paddingright="[0,0,0,0]"
+                            data-paddingbottom="[0,0,0,0]"
+                            data-paddingleft="[20,20,20,20]">
+                            <a class="readon important" href="about.html">Dive In</a>
+                        </div>
+
+
+                        <!-- BEGIN IMAGE LAYER -->
+
+                        <div class="tp-caption tp-resizeme rs-parallaxlevel-4 main-lys"                               
+                            data-x="['right','right','right','right']" data-hoffset="['560','400','0','0']"
+                            data-y="['middle','middle','middle','middle']" data-voffset="['0','30','30','30']" 
+                            data-width="[50,0,0,0]"
+                            data-height="none"
+                            data-type="image"
+                            data-responsive_offset="on"
+                            data-frames='[{"delay":900,"speed":1000,"frame":"0","from":"y:-100px;opacity:0;","to":"o:1;","ease":"Power3.easeInOut"},{"delay":"wait","speed":300,"frame":"999","to":"auto:auto;","ease":"Power3.easeInOut"}]'                      
+                            data-bgrepeat="no-repeat"
+                            data-bgparallax="15">
+                            <img src="{% static 'assets/images/banner/layer.png' %}"" alt="">
+                        </div>
+
+                        <!-- END IMAGE LAYER -->
+
+                        <!-- SPINE ANIMATION 1 -->
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="center" data-hoffset="-195"
+                            data-y="bottom" data-voffset="205"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine anim" src="{% static 'assets/images/banner/ly1.png' %}"" alt="">
+                        </div>
+
+
+                        <!-- SPINE ANIMATION 2 -->
+
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="left" data-hoffset="-200"
+                            data-y="bottom" data-voffset="50"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine anim" src="{% static 'assets/images/banner/ly2.png' %}"" alt="">
+                        </div>
+
+
+
+                        <!-- SPINE ANIMATION 3 -->
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="right" data-hoffset="140"
+                            data-y="bottom" data-voffset="50"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine anim" src="{% static 'assets/images/banner/ly3.png' %}"" alt="">
+                        </div>
+
+                        <!-- SPINE ANIMATION 4 -->
+
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="left" data-hoffset="-30"
+                            data-y="center" data-voffset="-20"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine2 anim" src="{% static 'assets/images/banner/ly4.png' %}"" alt="">
+                        </div>
+
+
+                        <!-- SPINE ANIMATION 5 -->
+
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="right" data-hoffset="-130"
+                            data-y="top" data-voffset="150"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine2 anim" src="{% static 'assets/images/banner/ly5.png' %}"" alt="">
+                        </div>
+
+                        <!-- SPINE ANIMATION 6 -->
+                        <div class="tp-caption tp-resizeme"
+                            data-frames='[{"delay": 500, "speed": 300, "from": "opacity: 0", "to": "opacity: 1"},{"delay": "wait", "speed": 300, "to": "opacity: 0"}]'
+                            data-type="image"
+                            data-x="center" data-hoffset="0"
+                            data-y="center" data-voffset="0"
+                            data-width="['auto']"
+                            data-height="['auto']"
+                            data-bgrepeat="no-repeat">
+                            <img class="spine3 anim" src="{% static 'assets/images/banner/ly6.png' %}"" alt="">
+                        </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- Banner Section End -->
+{% endblock %}

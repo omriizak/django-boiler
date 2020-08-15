@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+{% extends "main_app/base.html" %}
+{% load static %}
+{% block body_block %}
+    <!-- Breadcrumbs Start -->
+    <div class="rs-breadcrumbs">
+        <div class="breadcrumbs-wrap"> <img src="{% static 'assets/images/breadcrumbs/mount.png' %}" alt="Breadcrumbs Image">
+            <div class="breadcrumbs-inner">
+                <div class="container">
+                    <div class="breadcrumbs-text">
+                        <h1 class="breadcrumbs-title mb-17 sm-mb-10">About Us</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Breadcrumbs End -->
+    <!-- About Section Start -->
+    <div class="rs-about relative pt-130 pb-130 md-pt-80 md-pb-70">
+        <div class="container">
+            <div class="row y-middle">
+                <div class="col-lg-6 md-mb-30">
+                    <div class="image-part"> <img src="{% static 'assets/images/about/main.png' %}" alt="">
+                        <div class="anim"> <img class="spine2" src="{% static 'assets/images/about/pattern.png' %}" alt=""> </div>
+                        <div class="ly-img"> <img class="fly ly1" src="{% static 'assets/images/about/ly1.png' %}" alt=""> <img class="fly ly2" src="{% static 'assets/images/about/ly1.png' %}" alt=""> <img class="fly ly3" src="{% static 'assets/images/about/ly1.png' %}" alt=""> </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 pl-45 pr-95">
+                    <div class="sec-title mb-44">
+                        <div class="sub-title primary-color">About us</div>
+                        <h2 class="title mb-20">Hello, my name is Omri and I'm using Django</h2>
+                        <p class="desc2 mb-17">My personality is the intercection of three spheres: leadership, entrepreneurship and engineering.</p>
+                        <div class="desc">Reaching the end of a job interview, the Human Resources Manager asked the young engineer fresh out of university, "And what starting salary were you looking for?"
+
+                            The engineer said, "In the neighborhood of $100,000 a year, depending on the benefit's package."
+                            
+                            The HR Manager said, "Well, what would you say to a package of $200,000 a year, 5 weeks vacation, 14 paid holidays, full medical and dental, company matching retirement fund to 50% of salary, and a company car leased every 2 years - say, a red Mercedes?"
+                            
+                            The engineer sat up straight and said, "Wow!!! Are you joking?"
+                            
+                            And the HR Manager said, "Of course, ...but you started it."</div>
+                    </div>
+                    <div class="learn-btn"> <a class="readon" href="https://interestingengineering.com/25-best-engineering-jokes-make-your-day-better">See More</a> </div>
+                </div>
+            </div>
+        </div>
+        <div class="shape-img"> <img class="fly right-top" src="{% static 'assets/images/shape/shape1.png' %}" alt=""> </div>
+    </div>
+    <!-- About Section End -->
+
+    <!-- Call to Action Section Start -->
+
+    <div class="rs-cta bg1 pb-120 md-pb-70">
+        <div class="container">
+            <div class="content-wrap text-center">
+                <div class="sec-title mb-45">
+                    <div class="sub-title primary-color">Database Fun</div>
+                    <h2 class="title mb-0">Time to see<br> who is in your team</h2>
+                </div>
+                <!-- <form action="" method="POST">
+                    {% csrf_token %}
+
+                    <input class="btn btn-primary" type="submit" value="Who is in my team" name="not_in_team">
+                    <input class="btn btn-primary" type="submit" value="Who is not in my team, yet" name="in_team">
+                </form> -->
+                <div class="btn">
+                    <a class="readon" href="#not_my_team">Who is not in my team <i>yet</i></a>
+                </div>
+                <div class="btn">
+                    <a class="readon" href="#my_team">Who is in my team</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Call to Action Section End -->
+
+    
+    <!-- Blog Section Start Not CAI Team-->
+
+    <div id="not_my_team" class="rs-blog pt-100 md-pt-50">
+        <div class="container">
+            <div class="sec-title text-center mb-65">
+                <div class="sub-title primary-color">External</div>
+                <h2 class="title">Who will join next?</h2>
+                <p>Here is a list of people that are not on the Cape AI team.</p>
+            </div>
+            <div class="rs-carousel owl-carousel"
+                data-loop="true"
+                data-items="3"
+                data-margin="10"
+                data-nav="false"
+                data-dots="false"
+                data-autoplay="false"
+                data-hoverpause="true"
+                data-autoplay-timeout="1000"
+                data-smart-speed="800"
+                data-nav-speed="false"
+                data-center="true"
+                data-items-md="2"
+                data-margin-md="0"
+                data-center-md="false"
+                data-nav-md="false"
+                data-dots-md="false"
+                data-items-sm="1"
+                data-nav-sm="false"
+                data-dots-sm="false"
+                data-margin-sm="0"
+                data-items-xs="1"
+                data-nav-xs="false"
+                data-dots-xs="false"
+                data-margin-xs="0">
+
+                {% if non_employees %}
+                    {% for person in non_employees %}
+                    <div class="item">
+                        <div class="single-blog-slide">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img src="{% static 'images/employees/' %}{{ person.image }}" alt=""></a>
+                            </div>
+                            <div class="blog-informations">
+                                <h4 class="bl-title">{{ person.first_name }} {{ person.last_name}}</h4>
+                                <p>{{ person.position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+    
+    <!-- Blog Section Start On CAI Team-->
+
+    <div id="my_team" class="rs-blog pt-100 md-pt-50">
+        <div class="container">
+            <div class="sec-title text-center mb-65">
+                <div class="sub-title primary-color">Internal</div>
+                <h2 class="title">People on Cape AI Team</h2>
+                <p>Here are the superheros who are helping to build<br>a better future in South Afica</p>
+            </div>
+            <div class="rs-carousel owl-carousel"
+                data-loop="true"
+                data-items="4"
+                data-margin="10"
+                data-nav="true"
+                data-dots="false"
+                data-autoplay="true"
+                data-hoverpause="true"
+                data-autoplay-timeout="1000"
+                data-smart-speed="800"
+                data-nav-speed="false"
+                data-center="false"
+                data-items-md="2"
+                data-margin-md="0"
+                data-center-md="false"
+                data-nav-md="false"
+                data-dots-md="false"
+                data-items-sm="1"
+                data-nav-sm="false"
+                data-dots-sm="false"
+                data-margin-sm="0"
+                data-items-xs="1"
+                data-nav-xs="false"
+                data-dots-xs="false"
+                data-margin-xs="0">
+
+                {% if employees %}
+                    {% for person in employees %}
+                    <div class="item">
+                        <div class="single-blog-slide">
+                            <div class="blog-image">
+                                <a href="blog-details.html"><img src="{% static 'images/employees/' %}{{ person.image }}" alt=""></a>
+                            </div>
+                            <div class="blog-informations">
+                                <h4 class="bl-title">{{ person.first_name }} {{ person.last_name}}</h4>
+                                <p>{{ person.position }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                {% endif %}
+                
+            </div>
+        </div>
+    </div>
+    <!-- Blog Section End -->
+{% endblock %}
